@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://igf0cs0yri7y"]
+
+[ext_resource type="Texture2D" uid="uid://b501bftb7v2nc" path="res://assets/onlyObjects_retina_rotated.png" id="1_0vx1c"]
+[ext_resource type="Script" path="res://tanks/tank.gd" id="1_bq1y4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lqi8"]
+size = Vector2(78, 81)
+
+[node name="Tank" type="CharacterBody2D"]
+script = ExtResource("1_bq1y4")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("1_0vx1c")
+region_enabled = true
+region_rect = Rect2(308, 263, 80, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -0.5)
+shape = SubResource("RectangleShape2D_4lqi8")
+
+[node name="Turret" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, -1)
+rotation = -0.00133204
+texture = ExtResource("1_0vx1c")
+offset = Vector2(20, 0)
+region_enabled = true
+region_rect = Rect2(685, 14, 59, 24)
+
+[node name="Muzzle" type="Marker2D" parent="Turret"]
+position = Vector2(48.9986, 1.06527)
+
+[node name="GunTimer" type="Timer" parent="."]
