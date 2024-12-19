@@ -4,9 +4,12 @@
 [ext_resource type="Script" path="res://tanks/player.gd" id="2_k2k70"]
 
 [node name="Player" instance=ExtResource("1_kwloe")]
-position = Vector2(241, 190)
+position = Vector2(-1, -1)
 script = ExtResource("2_k2k70")
 speed = 100
 rotation_speed = 5.0
 gun_cooldown = 10.0
 health = 100
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+zoom = Vector2(0.5, 0.5)
