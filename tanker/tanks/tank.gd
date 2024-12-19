@@ -23,7 +23,5 @@ func _physics_process(delta):
 		if not alive:
 				return
 		control(delta)
-		if velocity.length() > 0:
-			move_and_slide()
-
-
+		#if velocity.length() > 0:
+		move_and_slide()

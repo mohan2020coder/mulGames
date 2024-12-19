@@ -2,6 +2,7 @@ extends "res://tanks/tank.gd"
 
 
 func control(delta):
+	velocity = Vector2.ZERO
 	$Turret.look_at(get_global_mouse_position())
 	var rot_dir = 0
 	if Input.is_action_pressed('turn_right'):
