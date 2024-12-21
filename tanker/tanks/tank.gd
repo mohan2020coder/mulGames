@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func _shoot():
 	if can_shoot:
-		print('hit')
+		#print('hit')
 		#can_shoot = false
 		$GunTimer.start()
 		var dir = Vector2(1,0).rotated($Turret.global_rotation)

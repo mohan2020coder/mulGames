@@ -7,6 +7,7 @@
 size = Vector2(23, 15)
 
 [node name="PlayerBullet" instance=ExtResource("1_okjqs")]
+scale = Vector2(2, 2)
 script = ExtResource("2_g6oew")
 speed = 720
 lifetime = 0.5
