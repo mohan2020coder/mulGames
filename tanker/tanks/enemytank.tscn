@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://00c56cbcj2ey"]
+[gd_scene load_steps=5 format=3 uid="uid://00c56cbcj2ey"]
 
 [ext_resource type="PackedScene" uid="uid://igf0cs0yri7y" path="res://tanks/tank.tscn" id="1_m6fon"]
 [ext_resource type="Script" path="res://tanks/enemytank.gd" id="2_sx5t7"]
+[ext_resource type="PackedScene" uid="uid://bypoxmiy2lju6" path="res://bullets/EnemyBullet.tscn" id="3_7487d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gppp"]
 size = Vector2(76.5, 67)
@@ -10,10 +11,12 @@ size = Vector2(76.5, 67)
 script = ExtResource("2_sx5t7")
 turrent_speed = 0.0
 detect_radius = 0
+Bullet = ExtResource("3_7487d")
 speed = 100
 rotation_speed = 10.0
 gun_cooldown = 30.0
 health = 100
+max_speed = 200
 
 [node name="Body" parent="." index="0"]
 region_rect = Rect2(268, 189, 79, 70)
@@ -30,6 +33,16 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRadius" index="0"]
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="5"]
+position = Vector2(-1, -31)
+target_position = Vector2(104, 1)
+collision_mask = 7
+
+[node name="RayCast2D2" type="RayCast2D" parent="." index="6"]
+position = Vector2(2, 33)
+target_position = Vector2(100, 1)
+collision_mask = 7
 
 [connection signal="body_entered" from="DetectRadius" to="." method="_on_detect_radius_body_entered"]
 [connection signal="body_exited" from="DetectRadius" to="." method="_on_detect_radius_body_exited"]

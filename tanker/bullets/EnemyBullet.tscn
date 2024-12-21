@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bypoxmiy2lju6"]
+
+[ext_resource type="PackedScene" uid="uid://2xx6n22uaw0q" path="res://bullets/bullet.tscn" id="1_fk3pp"]
+[ext_resource type="Script" path="res://bullets/enemy_bullet.gd" id="2_54e7l"]
+
+[node name="EnemyBullet" instance=ExtResource("1_fk3pp")]
+scale = Vector2(2, 2)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2_54e7l")
+speed = 750
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(368, 491, 24, 16)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.25, -0.5)

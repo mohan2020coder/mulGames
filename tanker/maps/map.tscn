@@ -2653,8 +2653,7 @@ position = Vector2(326, 963.882)
 rotation = -0.0169607
 
 [node name="EnemyTank" parent="Paths/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
-collision_layer = 4
-collision_mask = 3
+detect_radius = 200
 
 [node name="Paths1" type="Node2D" parent="."]
 
@@ -2668,6 +2667,8 @@ rotation = -1.51821
 [node name="EnemyTank" parent="Paths1/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
 position = Vector2(-4.52006, 28.2767)
 rotation = -0.112647
+turrent_speed = 2.0
+detect_radius = 100
 
 [node name="Paths2" type="Node2D" parent="."]
 
@@ -2679,6 +2680,8 @@ position = Vector2(2385, 1318)
 rotation = -1.58219
 
 [node name="EnemyTank" parent="Paths2/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 4.0
+detect_radius = 250
 
 [node name="Paths3" type="Node2D" parent="."]
 
@@ -2690,6 +2693,8 @@ position = Vector2(2361, -433)
 rotation = 1.46164
 
 [node name="EnemyTank" parent="Paths3/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 5.0
+detect_radius = 100
 
 [node name="Paths4" type="Node2D" parent="."]
 
@@ -2701,6 +2706,8 @@ position = Vector2(-317, 1082)
 rotation = -0.0155026
 
 [node name="EnemyTank" parent="Paths4/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 2.0
+detect_radius = 150
 
 [node name="Paths5" type="Node2D" parent="."]
 
@@ -2712,6 +2719,8 @@ position = Vector2(-311, 451)
 rotation = -0.00520829
 
 [node name="EnemyTank" parent="Paths5/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 2.0
+detect_radius = 400
 
 [node name="Paths6" type="Node2D" parent="."]
 
@@ -2722,6 +2731,8 @@ curve = SubResource("Curve2D_72htv")
 position = Vector2(596, 435)
 
 [node name="EnemyTank" parent="Paths6/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 3.0
+detect_radius = 350
 
 [node name="Paths7" type="Node2D" parent="."]
 
@@ -2733,6 +2744,8 @@ position = Vector2(1874, -60)
 rotation = -0.0182628
 
 [node name="EnemyTank" parent="Paths7/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 2.0
+detect_radius = 280
 
 [node name="Paths8" type="Node2D" parent="."]
 
@@ -2744,5 +2757,16 @@ position = Vector2(3641, -613)
 rotation = 1.56501
 
 [node name="EnemyTank" parent="Paths8/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+turrent_speed = 2.0
+detect_radius = 190
 
 [connection signal="shoot" from="Player" to="." method="_on_player_shoot"]
+[connection signal="shoot" from="Paths/Path2D/PathFollow2D/EnemyTank" to="." method="_on_player_shoot"]
+[connection signal="shoot" from="Paths1/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths2/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths3/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths4/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths5/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths6/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths7/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
+[connection signal="shoot" from="Paths8/Path2D/PathFollow2D/EnemyTank" to="." method="_on_enemy_tank_shoot"]
