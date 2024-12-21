@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3uq4bl1364r0"]
+[gd_scene load_steps=16 format=3 uid="uid://c3uq4bl1364r0"]
 
 [ext_resource type="Texture2D" uid="uid://bopnae8ecxdbk" path="res://assets/terrainTiles_retina.png" id="1_3cfvl"]
 [ext_resource type="Script" path="res://maps/map.gd" id="1_cm8pu"]
@@ -2579,6 +2579,54 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="Curve2D" id="Curve2D_73avh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1325, 1328, 0, 0, 0, 0, 1344, 967, 0, 0, 0, 0, 1677, 933, 0, 0, 0, 0, 1711, 229, 0, 0, 0, 0, 1325, 148, 0, 0, 0, 0, 1363, -313, 0, 0, 0, 0, 2134, -313, 0, 0, 0, 0, 2243, -23, 0, 0, 0, 0, 2258, 667, 0, 0, 0, 0, 2229, 1323, 0, 0, 0, 0, 1639, 1328, 0, 0, 0, 0, 1325, 1328)
+}
+point_count = 12
+
+[sub_resource type="Curve2D" id="Curve2D_viku6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2385, 1318, 0, 0, 0, 0, 2381, 967, 0, 0, 0, 0, 3249, 941, 0, 0, 0, 0, 3234, 484, 0, 0, 0, 0, 2389, 416, 0, 0, 0, 0, 2373, -48, 0, 0, 0, 0, 3359, -60, 0, 0, 0, 0, 3404, 458, 0, 0, 0, 0, 3393, 1103, 0, 0, 0, 0, 3325, 1326, 0, 0, 0, 0, 2766, 1322, 0, 0, 0, 0, 2385, 1318)
+}
+point_count = 12
+
+[sub_resource type="Curve2D" id="Curve2D_ad5s7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2361, -433, 0, 0, 0, 0, 2385, -214, 0, 0, 0, 0, 2842, -176, 0, 0, 0, 0, 3246, -204, 0, 0, 0, 0, 3289, -428, 0, 0, 0, 0, 3222, -585, 0, 0, 0, 0, 2808, -594, 0, 0, 0, 0, 2513, -599, 0, 0, 0, 0, 2361, -433)
+}
+point_count = 9
+
+[sub_resource type="Curve2D" id="Curve2D_vqkja"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -317, 1082, 0, 0, 0, 0, 70, 1076, 0, 0, 0, 0, 70, 1333, 0, 0, 0, 0, -308, 1321, 0, 0, 0, 0, -317, 1082)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_gvn8i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -311, 451, 0, 0, 0, 0, 73, 449, 0, 0, 0, 0, 60, 676, 0, 0, 0, 0, -309, 665, 0, 0, 0, 0, -311, 451)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_72htv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 596, 435, 0, 0, 0, 0, 938, 435, 0, 0, 0, 0, 951, 689, 0, 0, 0, 0, 596, 673, 0, 0, 0, 0, 596, 435)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_6agf5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1874, -60, 0, 0, 0, 0, 2093, -64, 0, 0, 0, 0, 2108, 533, 0, 0, 0, 0, 2105, 1065, 0, 0, 0, 0, 1871, 1058, 0, 0, 0, 0, 1863, 673, 0, 0, 0, 0, 1852, 186, 0, 0, 0, 0, 1874, -60)
+}
+point_count = 8
+
+[sub_resource type="Curve2D" id="Curve2D_d81q6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 3641, -613, 0, 0, 0, 0, 3645, 78, 0, 0, 0, 0, 3649, 523, 0, 0, 0, 0, 3633, 1044, 0, 0, 0, 0, 3658, 1345, 0, 0, 0, 0, 3764, 1345, 0, 0, 0, 0, 3781, 1023, 0, 0, 0, 0, 3785, 434, 0, 0, 0, 0, 3785, -20, 0, 0, 0, 0, 3798, -507, 0, 0, 0, 0, 3641, -613)
+}
+point_count = 11
+
 [node name="Map" type="Node2D"]
 script = ExtResource("1_cm8pu")
 
@@ -2590,6 +2638,8 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 65536, 0, 3, 524288, 3
 [node name="Player" parent="." instance=ExtResource("2_f7hk2")]
 position = Vector2(111, 192)
 scale = Vector2(1, 0.920001)
+collision_layer = 2
+collision_mask = 5
 
 [node name="Paths" type="Node2D" parent="."]
 
@@ -2603,3 +2653,96 @@ position = Vector2(326, 963.882)
 rotation = -0.0169607
 
 [node name="EnemyTank" parent="Paths/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+collision_layer = 4
+collision_mask = 3
+
+[node name="Paths1" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths1"]
+curve = SubResource("Curve2D_73avh")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths1/Path2D"]
+position = Vector2(1325, 1328)
+rotation = -1.51821
+
+[node name="EnemyTank" parent="Paths1/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+position = Vector2(-4.52006, 28.2767)
+rotation = -0.112647
+
+[node name="Paths2" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths2"]
+curve = SubResource("Curve2D_viku6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths2/Path2D"]
+position = Vector2(2385, 1318)
+rotation = -1.58219
+
+[node name="EnemyTank" parent="Paths2/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths3" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths3"]
+curve = SubResource("Curve2D_ad5s7")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths3/Path2D"]
+position = Vector2(2361, -433)
+rotation = 1.46164
+
+[node name="EnemyTank" parent="Paths3/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths4" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths4"]
+curve = SubResource("Curve2D_vqkja")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths4/Path2D"]
+position = Vector2(-317, 1082)
+rotation = -0.0155026
+
+[node name="EnemyTank" parent="Paths4/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths5" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths5"]
+curve = SubResource("Curve2D_gvn8i")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths5/Path2D"]
+position = Vector2(-311, 451)
+rotation = -0.00520829
+
+[node name="EnemyTank" parent="Paths5/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths6" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths6"]
+curve = SubResource("Curve2D_72htv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths6/Path2D"]
+position = Vector2(596, 435)
+
+[node name="EnemyTank" parent="Paths6/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths7" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths7"]
+curve = SubResource("Curve2D_6agf5")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths7/Path2D"]
+position = Vector2(1874, -60)
+rotation = -0.0182628
+
+[node name="EnemyTank" parent="Paths7/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[node name="Paths8" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Paths8"]
+curve = SubResource("Curve2D_d81q6")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths8/Path2D"]
+position = Vector2(3641, -613)
+rotation = 1.56501
+
+[node name="EnemyTank" parent="Paths8/Path2D/PathFollow2D" instance=ExtResource("4_15gho")]
+
+[connection signal="shoot" from="Player" to="." method="_on_player_shoot"]

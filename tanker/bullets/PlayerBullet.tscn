@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bokaplb8y8rlg"]
+
+[ext_resource type="PackedScene" uid="uid://2xx6n22uaw0q" path="res://bullets/bullet.tscn" id="1_okjqs"]
+[ext_resource type="Script" path="res://bullets/player_bullet.gd" id="2_g6oew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1xji"]
+size = Vector2(23, 15)
+
+[node name="PlayerBullet" instance=ExtResource("1_okjqs")]
+script = ExtResource("2_g6oew")
+speed = 720
+lifetime = 0.5
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_g1xji")

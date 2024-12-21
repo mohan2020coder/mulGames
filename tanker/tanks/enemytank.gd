@@ -31,8 +31,8 @@ func _process(delta: float) -> void:
 		
 
 func _on_detect_radius_body_entered(body: Node2D) -> void:
-	if body.name == 'Player':
-		target = body
+	#if body.name == 'Player':
+	target = body
 
 
 func _on_detect_radius_body_exited(body: Node2D) -> void:

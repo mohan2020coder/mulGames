@@ -30,3 +30,5 @@ region_rect = Rect2(685, 14, 59, 24)
 position = Vector2(48.9986, 1.06527)
 
 [node name="GunTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="GunTimer" to="." method="_on_gun_timer_timeout"]

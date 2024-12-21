@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://2xx6n22uaw0q"]
+
+[ext_resource type="Script" path="res://bullets/bullet.gd" id="1_1e0ec"]
+[ext_resource type="Texture2D" uid="uid://b501bftb7v2nc" path="res://assets/onlyObjects_retina_rotated.png" id="2_jqs5t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_insr6"]
+size = Vector2(25, 15)
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_1e0ec")
+speed = 100
+damage = 10
+lifetime = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jqs5t")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(368, 508, 24, 14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_insr6")
+
+[node name="Lifetime" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Lifetime" to="." method="_on_lifetime_timeout"]

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://boviaot8nu1wa"]
+[gd_scene load_steps=4 format=3 uid="uid://boviaot8nu1wa"]
 
 [ext_resource type="PackedScene" uid="uid://igf0cs0yri7y" path="res://tanks/tank.tscn" id="1_kwloe"]
 [ext_resource type="Script" path="res://tanks/player.gd" id="2_k2k70"]
+[ext_resource type="PackedScene" uid="uid://bokaplb8y8rlg" path="res://bullets/PlayerBullet.tscn" id="3_6keh8"]
 
 [node name="Player" instance=ExtResource("1_kwloe")]
 position = Vector2(-1, -1)
 script = ExtResource("2_k2k70")
+Bullet = ExtResource("3_6keh8")
 speed = 100
 rotation_speed = 5.0
 gun_cooldown = 10.0
@@ -13,3 +15,5 @@ health = 100
 
 [node name="Camera2D" type="Camera2D" parent="." index="4"]
 zoom = Vector2(0.5, 0.5)
+
+[node name="PlayerBullet" parent="." index="5" instance=ExtResource("3_6keh8")]
